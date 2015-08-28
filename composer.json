@@ -1,0 +1,15 @@
+{
+    "name": "rafaelnery/phputils",
+    "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
+    "type": "Utils",
+    "require": {
+        "symfony/var-dumper": "^2.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Nery",
+            "email": "rafanery0@gmail.com"
+        }
+    ]
+}
