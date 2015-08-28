@@ -3,8 +3,15 @@
     "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
     "type": "Utils",
     "require": {
-        "symfony/var-dumper": "^2.7"
+        "symfony/var-dumper": "^2.7",
+        "jdorn/sql-formatter": "^1.2",
+        "monolog/monolog": "^1.16"
     },
+    "autoload" : { 
+      "psr-4" : { 
+          "PHPUtils\\"  : "src/"
+        } 
+    }, 
     "license": "MIT",
     "authors": [
         {
