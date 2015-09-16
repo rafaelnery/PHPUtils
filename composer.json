@@ -2,7 +2,7 @@
     "name": "rafaelnery/phputils",
     "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
     "type": "Utils",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
 
     "require": {
         "php" : ">= 5.3",
