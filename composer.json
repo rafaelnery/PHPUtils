@@ -8,7 +8,7 @@
         "php" : ">= 5.3",
         "symfony/var-dumper": "^2.7",
         "jdorn/sql-formatter": "^1.2",
-        "monolog/monolog": "^1.16"
+        "monolog/monolog": "^1.16@dev"
     },
     "autoload" : { 
       "psr-4" : { 
