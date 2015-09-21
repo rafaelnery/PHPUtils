@@ -9,6 +9,9 @@ $oObjeto->backtrace = debug_backtrace();
 
 \PHP\Utils::dump_sql($sSql);
 \PHP\Utils::dump($sSql, $oObjeto);
+dump_sql($sSql);
+dump($sSql, $oObjeto);
+kill($sSql, $oObjeto);
 \PHP\Utils::kill($sSql, $oObjeto);
 echo "Não deve aparecer";
 
