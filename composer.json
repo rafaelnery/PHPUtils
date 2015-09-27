@@ -1,22 +1,24 @@
 {
-    "name": "rafaelnery/phputils",
-    "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
-    "type": "Utils",
-    "require": {
-        "symfony/var-dumper": "^2.7",
-        "jdorn/sql-formatter": "^1.2",
-        "monolog/monolog": "^1.16"
-    },
-    "autoload" : { 
-      "psr-4" : { 
-          "PHPUtils\\"  : "src/"
-        } 
-    }, 
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rafael Nery",
-            "email": "rafanery0@gmail.com"
-        }
-    ]
+  "name": "rafaelnery/phputils",
+  "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
+  "type": "Utils",
+  "minimum-stability": "dev",
+
+  "require": {
+    "php" : ">= 5.3",
+    "symfony/var-dumper": "^2.7",
+    "jdorn/sql-formatter": "^1.2",
+    "monolog/monolog": "^1.16@dev"
+  },
+
+  "autoload" : { 
+    "files": [ "src/functions/debug.php" ],
+    "psr-4" : { 
+      "PHP\\"  : "src/"
+    } 
+  }, 
+
+  "license": "MIT",
+  "authors": [{"name": "Rafael Nery", "email": "rafanery0@gmail.com"}
+  ]
 }
