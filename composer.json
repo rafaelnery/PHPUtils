@@ -2,13 +2,12 @@
   "name": "rafaelnery/phputils",
   "description": "Pacote com ferramentas 'porretas' para debug e desenvolvimento.",
   "type": "Utils",
-  "minimum-stability": "dev",
 
   "require": {
     "php" : ">= 5.3",
-    "symfony/var-dumper": "^2.7",
+    "symfony/var-dumper": "^2.8",
     "jdorn/sql-formatter": "^1.2",
-    "monolog/monolog": "^1.16@dev"
+    "monolog/monolog": "^1.17"
   },
 
   "autoload" : { 
