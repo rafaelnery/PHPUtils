@@ -12,4 +12,4 @@ install:
   - travis_retry composer install --prefer-dist --no-interaction
 
 script:
-  - ./vendor/bin/phpunit -v -c tests/$DB.phpunit.xml;
+  - ./vendor/bin/phpunit -v tests/;
