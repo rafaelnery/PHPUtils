@@ -14,15 +14,16 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
   public function testGetter() {
 
     $array = new ArrayDebugger($this->base);
+    $t = $this;
 
-    $array->setLogger(function($retorno)  {
-      $this->assertEquals($retorno['type'], ArrayDebugger::TYPE_GET);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertEquals($retorno['type'], ArrayDebugger::TYPE_GET);
     });
 
     $teste = $array['hum'];
 
-    $array->setLogger(function($retorno) {
-      $this->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_GET);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_GET);
     });
 
     $array['quatro'] = 4;
@@ -41,14 +42,15 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
 
     $array = new ArrayDebugger($this->base);
 
-    $array->setLogger(function($retorno)  {
-      $this->assertEquals($retorno['type'], ArrayDebugger::TYPE_SET);
+    $t = $this;
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertEquals($retorno['type'], ArrayDebugger::TYPE_SET);
     });
 
     $array['quatro'] = 4;
 
-    $array->setLogger(function($retorno) {
-      $this->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_SET);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_SET);
     });
 
     $teste = $array['hum'];
@@ -67,8 +69,9 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
 
     $array = new ArrayDebugger($this->base);
 
-    $array->setLogger(function($retorno)  {
-      $this->assertEquals($retorno['type'], ArrayDebugger::TYPE_EXISTS);
+    $t = $this;
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertEquals($retorno['type'], ArrayDebugger::TYPE_EXISTS);
     });
 
 
@@ -77,8 +80,8 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
      */
     isset($array['hum']);
 
-    $array->setLogger(function($retorno) {
-      $this->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_EXISTS);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_EXISTS);
     });
 
     $array['quatro'] = 4;
@@ -94,9 +97,10 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
   public function testUnset() {
 
     $array = new ArrayDebugger($this->base);
+    $t = $this;
 
-    $array->setLogger(function($retorno)  {
-      $this->assertEquals($retorno['type'], ArrayDebugger::TYPE_UNSET);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertEquals($retorno['type'], ArrayDebugger::TYPE_UNSET);
     });
 
     /**
@@ -104,8 +108,8 @@ class ArrayDebuggerTest extends \PHPUnit_Framework_TestCase
      */
     unset($array['dois']);
 
-    $array->setLogger(function($retorno) {
-      $this->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_UNSET);
+    $array->setLogger(function($retorno) use($t) {
+      $t->assertNotEquals($retorno['type'], ArrayDebugger::TYPE_UNSET);
     });
     /**
      * offsetExists
