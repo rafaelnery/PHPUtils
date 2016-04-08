@@ -5,7 +5,7 @@
 
   "require": {
     "php" : ">= 5.3",
-    "symfony/var-dumper": "^2.8",
+    "symfony/var-dumper": "^2.8||~3.0",
     "jdorn/sql-formatter": "^1.2",
     "monolog/monolog": "^1.18"
   },
@@ -21,6 +21,6 @@
   "authors": [{"name": "Rafael Nery", "email": "rafanery0@gmail.com"}
   ],
   "require-dev": {
-    "phpunit/phpunit": "^5.3"
+    "phpunit/phpunit": "~4.0||^5.3"
   }
 }
