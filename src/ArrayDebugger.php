@@ -33,8 +33,8 @@ class ArrayDebugger extends \ArrayObject {
     $retorno['type']  = $type;  
     $retorno['key']   = $key;
     $retorno['value'] = $value;
-    $retorno['file']  = $backtrace[0]['file'];
-    $retorno['line']  = $backtrace[0]['line'];
+    $retorno['file']  = isset($backtrace[0]['file']) ? $backtrace[0]['file'] : '';
+    $retorno['line']  = isset($backtrace[0]['line']) ? $backtrace[0]['line'] : '';
     return $logger($retorno);
   }
 
