@@ -5,7 +5,7 @@
 
   "require": {
     "php" : ">= 5.5",
-    "symfony/var-dumper": "^3.8",
+    "symfony/var-dumper": "^3.0",
     "jdorn/sql-formatter": "^1.2",
     "monolog/monolog": "^1.18"
   },
