@@ -10,7 +10,7 @@ before_install:
   - composer global require hirak/prestissimo
 
 install:
-  - composer install --no-interaction 
+  - composer install --profile 
 
 script:
   - ./vendor/bin/phpunit -v -c phpunit.xml tests/;
