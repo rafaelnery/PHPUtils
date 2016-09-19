@@ -1,10 +1,8 @@
 language: php
 php:
-  - 5.3
-  - 5.4
-  - 5.5
   - 5.6
   - 7.0
+  - nightly 
 before_install:
   - composer self-update
   - composer global require hirak/prestissimo
@@ -13,4 +11,4 @@ install:
   - composer install --profile 
 
 script:
-  - ./vendor/bin/phpunit -v -c phpunit.xml tests/;
+  - ./vendor/bin/phpunit -v -c phpunit.xml tests/
