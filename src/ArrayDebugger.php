@@ -30,14 +30,13 @@ class ArrayDebugger extends \ArrayObject {
    */
   public function sendLog($type, $key, $value = null, array $backtrace ) 
   {
-
-      $logger           = $this->logger;
-      $retorno['type']  = $type;  
-      $retorno['key']   = $key;
-      $retorno['value'] = $value;
-      $retorno['file']  = isset($backtrace[0]['file']) ? $backtrace[0]['file'] : '';
-      $retorno['line']  = isset($backtrace[0]['line']) ? $backtrace[0]['line'] : '';
-      return $logger($retorno);
+      return $this->logger(array(
+          'type'  => $type,  
+          'key'   => $key,
+          'value' => $value,
+          'file'  => isset($backtrace[0]['file']) ? $backtrace[0]['file'] : '',
+          'line'  => isset($backtrace[0]['line']) ? $backtrace[0]['line'] : '',
+      ));
   }
 
   /**
