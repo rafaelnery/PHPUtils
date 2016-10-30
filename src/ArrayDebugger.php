@@ -30,7 +30,8 @@ class ArrayDebugger extends \ArrayObject {
    */
   public function sendLog($type, $key, $value = null, array $backtrace ) 
   {
-      return $this->logger(array(
+      $callbackLogger = $this->logger;
+      return $callbackLogger(array(
           'type'  => $type,  
           'key'   => $key,
           'value' => $value,
